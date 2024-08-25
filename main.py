@@ -13,6 +13,8 @@ class Game:
         pg.display.set_caption("Breakout")
         self.clock = pg.time.Clock()
         self.screen_rect = self.screen.get_rect()
+        self.lives = 3
+        self.score = 0
 
         self.bricks = self.gen_bricks()
         self.paddle = Paddle()
@@ -37,8 +39,18 @@ class Game:
 
     def update(self):
 
+        pg.display.set_caption(f"Breakout | Lives: {self.lives} | Score: {self.score}")
+
         self.paddle.move(self.screen_rect)
-        self.ball.update(self.bricks + [self.paddle], self.screen_rect)
+        self.ball.update(self)
+
+        if self.ball.rect.midtop[1] > self.paddle.rect.midbottom[1]:
+            self.lives -= 1
+            self.ball = Ball()
+
+            if self.lives == 0:
+                pg.quit()
+                quit()
 
     def render(self):
 
