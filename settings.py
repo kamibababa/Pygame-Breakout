@@ -1,0 +1,17 @@
+import pygame as pg
+
+ROWS = 8
+COLUMNS = 20
+
+BRICK_WIDTH = 500 // COLUMNS
+BRICK_HEIGHT = 100 // ROWS
+BRICK_OFFSET = 75 #Pixel offset from the top of the screen 
+
+MOV_SPEED = 5
+PADDLE_WIDTH = 200
+PADDLE_HEIGHT = 20
+PADDLE_ORIGIN = (400, 700)
+
+BALL_SIDE_LENGTH = 20
+BALL_ORIGIN = (400, 650)
+BALL_SPEED = 5
