@@ -55,5 +55,3 @@ I made this game purely for practice reasons, please consult the official licens
 
 - Inspired by the original Breakout game for Arcade and Atari 2600.
 - Built using [Pygame](https://www.pygame.org/).
-
-Enjoy playing Pygame-Breakout!
